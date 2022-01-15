@@ -10,7 +10,7 @@ function App() {
 
   // function which send data to the server
   const handleSubmit = () => {
-    Axios.post("http://localhost:3001/addfriend", { name: name, age: age })
+    Axios.post("https://mernstack-crud-app.herokuapp.com/addfriend", { name: name, age: age })
       .then((res) => {
         alert("Sucessfully send to the server");
       })
@@ -21,7 +21,7 @@ function App() {
 
   // Function to delete friend
   const handleDelete = (id) => {
-    Axios.delete(`http://localhost:3001/delete/${id}`)
+    Axios.delete(`https://mernstack-crud-app.herokuapp.com/delete/${id}`)
       .then((res) => {
         alert("Delete request sended to the server");
         setFriends(
@@ -38,7 +38,7 @@ function App() {
   // function which update the data of friend
   const handleUpdate = (id) => {
     const newAge = prompt("Enter new age:");
-    Axios.put("http://localhost:3001/update", { id: id, newAge: newAge })
+    Axios.put("https://mernstack-crud-app.herokuapp.com/update", { id: id, newAge: newAge })
       .then((res) => {
         alert("updated data sended to the server");
         setFriends(
@@ -55,7 +55,7 @@ function App() {
   };
   // Extrating all friend from database
   useEffect(() => {
-    Axios.get("http://localhost:3001/read")
+    Axios.get("https://mernstack-crud-app.herokuapp.com/read")
       .then((response) => {
         setFriends(response.data);
       })
