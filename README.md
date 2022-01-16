@@ -4,4 +4,4 @@
 
 ## Purpose of The Project
 
-The Project is created to get fimiliar with MERN Stack CRUD operations.
+The Project is created to get familiar with MERN Stack CRUD operations.
